@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusKart</title>
+  <!-- Tailwind CSS (already added for you) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+ <!-- TODO Build It 3: Navigation Bar
+       Add classes to <nav>, <h1> and the <div> of links -->
+  <nav class="bg-[#b33ba2] text-white px-8 py-3.5 flex justify-between items-center shadow-sm">
+    <h1 class="text-xl font-bold tracking-tight">
+      Campus<span class="text-amber-300">Kart</span>
+    </h1>
+    <div class="flex items-center gap-6 text-sm font-medium">
+      <a href="#products" class="hover:text-amber-300 transition-colors"><i class="fa-solid fa-bag-shopping"></i>Shop</a>
+      <a href="#cart" class="hover:text-amber-300 transition-colors"><i class="fa-solid fa-cart-shopping"></i>Cart (0)</a>
+    </div>
+  </nav>
+
+  <!-- TODO Build It 5: Responsive Sale Banner
+       Add classes to <section>, <h2>, <p> and <img>.
+       Remember: text-center on phone, md:text-left and md:justify-between on laptop -->
+  <section class="bg-[#fed7aa] text-slate-900 p-8 md:p-12 flex flex-col md:flex-row items-center md:justify-between text-center md:text-left gap-8 overflow-hidden">
+    <div>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-[#800080]">College Sale<i class="fa-solid fa-face-grin-stars"></i></h2>
+      <p class="text-[#b33ba2] font-semibold text-base md:text-lg mt-3">Up to 50% off on bags, books and more</p>
+
+      <!-- Shop Now Button -->
+      <a href="#products" class="inline-block mt-6 px-6 py-2.5 bg-amber-400 hover:bg-amber-300 text-[#800080] font-bold text-sm rounded-lg shadow-md transition-colors">
+        Shop Now<i class="fa-solid fa-hand-point-left"></i>
+      </a>
+    </div>
+
+    <div id="sale1">
+      <img src="pink_yellow_sale.jpeg" alt="Sale" class="w-56 md:w-64 h-auto rounded-2xl shadow-lg object-contain">
+    </div>
+  </section>
+
+  <!-- Why Shop With Us -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center px-8 py-8 max-w-7xl mx-auto">
+    <div class="bg-[#fef08a] p-5 rounded-xl shadow-sm border border-emerald-200">
+      <p class="text-2xl font-extrabold text-[#800080]">Free</p>
+      <p class="text-emerald-900 text-sm font-medium mt-1">Delivery<i class="fa-solid fa-truck-fast"></i></p>
+    </div>
+    <div class="bg-[#fef08a] p-5 rounded-xl shadow-sm border border-emerald-200">
+      <p class="text-2xl font-extrabold text-[#800080]">7-Day</p>
+      <p class="text-emerald-900 text-sm font-medium mt-1">Returns<i class="fa-solid fa-reply-all"></i></p>
+    </div>
+    <div class="bg-[#fef08a] p-5 rounded-xl shadow-sm border border-emerald-200">
+      <p class="text-2xl font-extrabold text-[#800080]">COD</p>
+      <p class="text-emerald-900 text-sm font-medium mt-1">Available<i class="fa-solid fa-check"></i></p>
+    </div>
+  </section>
+
+  <!-- Responsive Product Grid (8 Products with Larger Height) -->
+  <section id="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-8 pb-12 max-w-7xl mx-auto">
+
+    <!-- Product Card 1 -->
+    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between h-full hover:shadow-md transition-shadow">
+      <div>
+        <div class="w-full h-64 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+          <img src="backpack.jpeg" alt="Backpack" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold text-slate-800 text-base">Backpack</h3>
+        <p class="text-[#800080] font-extrabold text-sm mt-1">
+          Rs. 799 <span class="text-slate-400 font-normal line-through text-xs ml-1">1299</span>
+        </p>
+      </div>
+      <button class="w-full mt-4 bg-[#b33ba2] hover:bg-[#800080] text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors shadow-sm">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between h-full hover:shadow-md transition-shadow">
+      <div>
+        <div class="w-full h-64 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+          <img src="notebook.jpeg" alt="Notebooks" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold text-slate-800 text-base">Notebook Set</h3>
+        <p class="text-[#800080] font-extrabold text-sm mt-1">
+          Rs. 199 <span class="text-slate-400 font-normal line-through text-xs ml-1">299</span>
+        </p>
+      </div>
+      <button class="w-full mt-4 bg-[#b33ba2] hover:bg-[#800080] text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors shadow-sm">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between h-full hover:shadow-md transition-shadow">
+      <div>
+        <div class="w-full h-64 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+          <img src="bottle.jpeg" alt="Water Bottle" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold text-slate-800 text-base">Water Bottle</h3>
+        <p class="text-[#800080] font-extrabold text-sm mt-1">
+          Rs. 349 <span class="text-slate-400 font-normal line-through text-xs ml-1">499</span>
+        </p>
+      </div>
+      <button class="w-full mt-4 bg-[#b33ba2] hover:bg-[#800080] text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors shadow-sm">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between h-full hover:shadow-md transition-shadow">
+      <div>
+        <div class="w-full h-64 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+          <img src="earphone1.jpeg" alt="Earphones" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold text-slate-800 text-base">Earphones</h3>
+        <p class="text-[#800080] font-extrabold text-sm mt-1">
+          Rs. 599 <span class="text-slate-400 font-normal line-through text-xs ml-1">999</span>
+        </p>
+      </div>
+      <button class="w-full mt-4 bg-[#b33ba2] hover:bg-[#800080] text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors shadow-sm">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between h-full hover:shadow-md transition-shadow">
+      <div>
+        <div class="w-full h-64 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+          <img src="lamp.jpeg" alt="Desk Lamp" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold text-slate-800 text-base">Study Lamp</h3>
+        <p class="text-[#800080] font-extrabold text-sm mt-1">
+          Rs. 449 <span class="text-slate-400 font-normal line-through text-xs ml-1">699</span>
+        </p>
+      </div>
+      <button class="w-full mt-4 bg-[#b33ba2] hover:bg-[#800080] text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors shadow-sm">
+        Add to Cart
+      </button>
+    </div>
+
+   
+    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between h-full hover:shadow-md transition-shadow">
+      <div>
+        <div class="w-full h-64 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+          <img src="pens.jpeg" alt="Gel Pens Set" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold text-slate-800 text-base">Gel Pen Pack</h3>
+        <p class="text-[#800080] font-extrabold text-sm mt-1">
+          Rs. 99 <span class="text-slate-400 font-normal line-through text-xs ml-1">150</span>
+        </p>
+      </div>
+      <button class="w-full mt-4 bg-[#b33ba2] hover:bg-[#800080] text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors shadow-sm">
+        Add to Cart
+      </button>
+    </div>
+
+
+    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between h-full hover:shadow-md transition-shadow">
+      <div>
+        <div class="w-full h-64 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+          <img src="laptop_sleeve.jpeg" alt="Laptop Sleeve" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold text-slate-800 text-base">Laptop Sleeve</h3>
+        <p class="text-[#800080] font-extrabold text-sm mt-1">
+          Rs. 499 <span class="text-slate-400 font-normal line-through text-xs ml-1">899</span>
+        </p>
+      </div>
+      <button class="w-full mt-4 bg-[#b33ba2] hover:bg-[#800080] text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors shadow-sm">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between h-full hover:shadow-md transition-shadow">
+      <div>
+        <div class="w-full h-64 bg-slate-100 rounded-xl mb-4 overflow-hidden">
+          <img src="planner.jpeg" alt="Academic Planner" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold text-slate-800 text-base">2026 Planner</h3>
+        <p class="text-[#800080] font-extrabold text-sm mt-1">
+          Rs. 249 <span class="text-slate-400 font-normal line-through text-xs ml-1">399</span>
+        </p>
+      </div>
+      <button class="w-full mt-4 bg-[#b33ba2] hover:bg-[#800080] text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors shadow-sm">
+        Add to Cart
+      </button>
+    </div>
+
+  </section>
+
+  <footer class="bg-[#800080] text-slate-200 py-6 text-center text-lg">
+    <p>&copy; 2026 CampusKart</p>
+    <p>Made With &#129505 By sumaiyya</p>
+    <p>Thanks For Visiting &#128522;</p>
+    <div class="flex justify-center gap-6 mt-2">
+      <a href="#" class="hover:text-amber-300 transition-colors">About🔍</a>
+      <a href="#" class="hover:text-amber-300 transition-colors">Contact📞</a>
+
+    </div>
+  
+  </footer>
+
+</body>
+</html>

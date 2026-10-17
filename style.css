@@ -1,0 +1,16 @@
+#sale1{ 
+    animation: animationscroll 1s 0s ease-in-out infinite alternate;
+    position:relative;
+
+    
+
+} 
+@keyframes animationscroll{
+    from{right:0px;
+    }
+    to{right:500px;}
+
+}
+body{
+    background-color: rgb(248, 203, 211);
+}
